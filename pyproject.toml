@@ -5,3 +5,38 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "typing_extensions",
+    "pytest",
+    "ruff",
+    "mypy",
+    "polyfactory",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+  "E", "F", "I", "B",
+  "UP",   # pyupgrade (modern syntax)
+  "SIM",  # simplify (logic simplifications)
+  "C4",   # comprehensions
+  "PERF", # performance footguns
+  "ARG",  # unused arguments
+]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+python_files = ["*.py"]
+
+[tool.mypy]
+python_version = "3.13"
+explicit_package_bases = true
+strict = true
+warn_unreachable = true
+ignore_missing_imports = true
+no_implicit_optional = true
