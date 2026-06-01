@@ -77,9 +77,9 @@ For tasks where the **primary objective is to solve the puzzle**, the issue is *
 
 1. `make flint` passes (format + lint, zero errors)
 2. `make test` passes (all tests green)
-3. **User has verified the answer** by running the solution against the real `input/day_NN.txt` and confirming the output is accepted on the AoC website
+3. **Answer verified on AoC website** — YOU run `python src/day_NN_P.py` against the real `input/day_NN.txt`, report the output to the user, and wait for them to confirm it was accepted on the AoC website.
 
-Never close a puzzle-solving issue or claim the work is done without explicit user confirmation of step 3.
+Never close a puzzle-solving issue or claim the work is done without explicit user confirmation that step 3 was accepted.
 
 For other tasks (refactoring, docstrings, tooling, etc.), steps 1 and 2 are sufficient.
 
