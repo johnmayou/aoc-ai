@@ -88,6 +88,17 @@ input/day_NN.txt      # personal puzzle input (gitignored)
 
 `day_NN` is consistent across all three: `src/day_02_1.py` reads from `input/day_02.txt` and its puzzle is in `prompt/day_02.txt`.
 
+**All `src/day_NN_P.py` files are pre-created as empty stubs in the repository.** Before writing any solution file, always `Read` it first — even if you expect it to be empty or new. The `Write` tool will fail if you skip this step for an existing file.
+
+## When a Command Fails Unexpectedly
+
+If a command fails that you expected to succeed:
+
+1. **Stop** — do not work around it or retry blindly.
+2. **Root cause it** — read the error carefully, check tool docs, inspect file state, check what assumptions you made that might be wrong.
+3. **Update instructions** — once you understand why, add a note to the relevant CLAUDE.md (or `bd remember`) so it cannot recur.
+4. **If you cannot determine the cause** — ask the user for help before proceeding. Do not guess and move on.
+
 ## Definition of Done
 
 For tasks where the **primary objective is to solve the puzzle**, the issue is **not complete** until all of the following are true:
