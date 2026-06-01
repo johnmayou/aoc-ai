@@ -223,3 +223,6 @@ __marimo__/
 .dolt/
 *.db
 .beads-credential-key
+
+# Advent of Code
+/input
