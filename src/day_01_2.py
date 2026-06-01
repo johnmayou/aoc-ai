@@ -13,17 +13,11 @@ L82
 
 
 def parse(data: str) -> list[tuple[str, int]]:
-    result = []
-    for line in data.strip().splitlines():
-        result.append((line[0], int(line[1:])))
-    return result
+    return [(line[0], int(line[1:])) for line in data.strip().splitlines()]
 
 
 def zeros_passed(pos: int, direction: str, distance: int) -> int:
-    if direction == "L":
-        first_hit = pos if pos > 0 else 100
-    else:
-        first_hit = (100 - pos) % 100 or 100
+    first_hit = (pos if pos > 0 else 100) if direction == "L" else (100 - pos) % 100 or 100
     if distance < first_hit:
         return 0
     return (distance - first_hit) // 100 + 1
@@ -39,7 +33,8 @@ def solve(instructions: list[tuple[str, int]]) -> int:
 
 
 def main() -> None:
-    data = open("input/day_01.txt").read()
+    with open("input/day_01.txt") as f:
+        data = f.read()
     print(solve(parse(data)))
 
 

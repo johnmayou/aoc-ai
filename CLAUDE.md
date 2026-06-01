@@ -71,6 +71,16 @@ input/day_NN.txt      # personal puzzle input (gitignored)
 
 `day_NN` is consistent across all three: `src/day_02_1.py` reads from `input/day_02.txt` and its puzzle is in `prompt/day_02.txt`.
 
+## Definition of Done
+
+A puzzle solution is **not complete** until all of the following are true:
+
+1. `make flint` passes (format + lint, zero errors)
+2. `make test` passes (all tests green)
+3. **User has verified the answer** by running the solution against the real `input/day_NN.txt` and confirming the output is accepted on the AoC website
+
+Never close a puzzle issue or claim the work is done without explicit user confirmation of step 3.
+
 ## Conventions & Patterns
 
 - Tests live in the same file as the solution — write `test_*` functions directly in `day_NN_P.py`. No separate test file needed. pytest discovers tests in all `*.py` files via `python_files = ["*.py"]` in `pyproject.toml`.

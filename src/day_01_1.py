@@ -24,7 +24,8 @@ def solve(data: str) -> int:
 
 
 def main() -> None:
-    data = open("input/day_01.txt").read()
+    with open("input/day_01.txt") as f:
+        data = f.read()
     print(solve(data))
 
 
