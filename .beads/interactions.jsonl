@@ -1,0 +1,1 @@
+{"id":"int-a220ab73","kind":"field_change","created_at":"2026-06-01T00:54:08.800995Z","actor":"John Mayou","issue_id":"aoc-ai-0bu","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"Sample test passes (3). Real answer: 1076."}}
