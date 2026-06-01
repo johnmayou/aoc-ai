@@ -52,6 +52,23 @@ bd close <id>         # Complete work
 - If push fails, resolve and retry until it succeeds
 <!-- END BEADS INTEGRATION -->
 
+## Git Commits
+
+**`cat` is aliased to `kat` (a `bat` wrapper) in this environment.** `bat` does not accept heredoc stdin, so the system default of `$(cat <<'EOF'...EOF)` for commit messages silently returns an empty string and aborts the commit.
+
+**Always use `\cat` to bypass the alias:**
+
+```bash
+git commit -m "$(\cat <<'EOF'
+feat: subject line
+
+Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+EOF
+)"
+```
+
+The leading `\` forces the real `/bin/cat`, bypassing the alias.
+
 ## Build & Test
 
 | Command      | Description      |
