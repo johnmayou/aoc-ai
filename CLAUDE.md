@@ -3,6 +3,7 @@
 This file provides instructions and context for AI coding agents working on this project.
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:7510c1e2 -->
+
 ## Beads Issue Tracker
 
 This project uses **bd (beads)** for issue tracking. Run `bd prime` to see full workflow context and commands.
@@ -44,27 +45,33 @@ bd close <id>         # Complete work
 7. **Hand off** - Provide context for next session
 
 **CRITICAL RULES:**
+
 - Work is NOT complete until `git push` succeeds
 - NEVER stop before pushing - that leaves work stranded locally
 - NEVER say "ready to push when you are" - YOU must push
 - If push fails, resolve and retry until it succeeds
 <!-- END BEADS INTEGRATION -->
 
-
 ## Build & Test
 
-_Add your build and test commands here_
-
-```bash
-# Example:
-# npm install
-# npm test
-```
+| Command      | Description      |
+| ------------ | ---------------- |
+| `make fmt`   | Format Python    |
+| `make lint`  | Lint Python      |
+| `make flint` | Format then lint |
+| `make test`  | Run all tests    |
 
 ## Architecture Overview
 
-_Add a brief overview of your project architecture_
+```
+src/day_NN_P.py       # solution — N = day number, P = part (1 or 2)
+problems/day_NN.md    # puzzle instructions — part 1 at top, part 2 below "--- Part Two ---"
+input/day_NN.txt      # personal puzzle input (gitignored)
+```
+
+`day_NN` is consistent across all three: `src/day_02_1.py` reads from `input/day_02.txt` and its puzzle is in `problems/day_02.md`.
 
 ## Conventions & Patterns
 
-_Add your project-specific conventions here_
+- Tests live in the same file as the solution — write `test_*` functions directly in `part_NN_P.py`. No separate `test_` file needed. pytest discovers tests in all `*.py` files via `python_files = ["*.py"]` in `pyproject.toml`.
+- Never read the full contents of `input/day_NN.txt` — these files can be large. Read only the first few lines to understand the format.
