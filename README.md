@@ -4,8 +4,6 @@ My solutions to [Advent of Code 2025](https://adventofcode.com/2025), used as a 
 
 [Advent of Code](https://adventofcode.com/2025) is an annual series of small programming puzzles released daily through December. Each day unlocks two parts; Part 2 is hidden until you solve Part 1. The puzzles are self-contained and well-specified, which makes them a good testbed for an AI-driven workflow: clear inputs, known sample answers, and a single correct output to verify against.
 
----
-
 ## Why this repo exists
 
 A recruiter asked: _"How do you use AI in your workflow?"_
@@ -14,8 +12,6 @@ I didn't have a great answer.
 
 So I set out to figure that out. This repo is a testing ground for evaluating AI development tools and practices, using Advent of Code puzzles as the vehicle to put them into use. There's a lot to learn, and the answers keep changing as I go.
 
----
-
 ## The tool stack
 
 **[Claude Code](https://claude.ai/code)** — the AI coding assistant doing the implementation work. It reads puzzle descriptions, writes failing tests, implements solutions, runs them, and reports answers.
@@ -23,8 +19,6 @@ So I set out to figure that out. This repo is a testing ground for evaluating AI
 **[superpowers-beads](https://github.com/jbongaarts/superpowers-beads)** — a plugin for Claude Code that installs discipline as skills: test-driven development, systematic debugging, verification before completion, code review, and more. Instead of the AI defaulting to "write code and hope," these skills enforce a specific process: RED/GREEN/REFACTOR, root-cause before fix, never close a task without verified output.
 
 **[bd (beads)](https://github.com/gastownhall/beads)** — a local issue tracker that persists across AI sessions. Because each conversation starts fresh, bd is how the agent knows what's been done, what's in progress, and what's next. It's the memory layer.
-
----
 
 ## The workflow
 
@@ -39,8 +33,6 @@ Every puzzle day follows the same loop:
 
 The key constraint: the agent cannot close an issue until I confirm the answer was accepted. This keeps the AI honest, it can't declare victory based on passing its own tests.
 
----
-
 ## Progress
 
 | Day | Part 1 | Part 2 |
@@ -48,8 +40,6 @@ The key constraint: the agent cannot close an issue until I confirm the answer w
 | 01  | ✓      | ✓      |
 | 02  | ✓      | ✓      |
 | 03  | ✓      | ✓      |
-
----
 
 ## What's next
 
