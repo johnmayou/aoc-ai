@@ -17,6 +17,11 @@ def parse(data: str) -> list[tuple[str, int]]:
 
 
 def zeros_passed(pos: int, direction: str, distance: int) -> int:
+    """
+    Count how many times position 0 is crossed when moving `distance` steps
+    in `direction` on a circular 0-99 track from `pos`. `first_hit` is the
+    steps to reach 0 the first time; after that, every 100 steps adds one more.
+    """
     first_hit = (pos if pos > 0 else 100) if direction == "L" else (100 - pos) % 100 or 100
     if distance < first_hit:
         return 0
