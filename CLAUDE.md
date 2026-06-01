@@ -65,11 +65,11 @@ bd close <id>         # Complete work
 
 ```
 src/day_NN_P.py       # solution — N = day number, P = part (1 or 2)
-problems/day_NN.md    # puzzle instructions — part 1 at top, part 2 below "--- Part Two ---"
+prompt/day_NN.md      # puzzle instructions — part 1 at top, part 2 below "--- Part Two ---"
 input/day_NN.txt      # personal puzzle input (gitignored)
 ```
 
-`day_NN` is consistent across all three: `src/day_02_1.py` reads from `input/day_02.txt` and its puzzle is in `problems/day_02.md`.
+`day_NN` is consistent across all three: `src/day_02_1.py` reads from `input/day_02.txt` and its puzzle is in `prompt/day_02.md`.
 
 ## Conventions & Patterns
 
