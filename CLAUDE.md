@@ -73,13 +73,15 @@ input/day_NN.txt      # personal puzzle input (gitignored)
 
 ## Definition of Done
 
-A puzzle solution is **not complete** until all of the following are true:
+For tasks where the **primary objective is to solve the puzzle**, the issue is **not complete** until all of the following are true:
 
 1. `make flint` passes (format + lint, zero errors)
 2. `make test` passes (all tests green)
 3. **User has verified the answer** by running the solution against the real `input/day_NN.txt` and confirming the output is accepted on the AoC website
 
-Never close a puzzle issue or claim the work is done without explicit user confirmation of step 3.
+Never close a puzzle-solving issue or claim the work is done without explicit user confirmation of step 3.
+
+For other tasks (refactoring, docstrings, tooling, etc.), steps 1 and 2 are sufficient.
 
 ## Conventions & Patterns
 
