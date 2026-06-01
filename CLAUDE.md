@@ -85,6 +85,13 @@ Never close a puzzle issue or claim the work is done without explicit user confi
 
 - Tests live in the same file as the solution — write `test_*` functions directly in `day_NN_P.py`. No separate test file needed. pytest discovers tests in all `*.py` files via `python_files = ["*.py"]` in `pyproject.toml`.
 - Never read the full contents of `input/day_NN.txt` — these files can be large. Read only the first few lines to understand the format.
+- Docstrings: be pragmatic — only add one when the WHY or the mental model is non-obvious. Use the multi-line format always:
+  ```python
+  """
+  docstring here
+  """
+  ```
+  Never use the inline form `"""docstring here"""`.
 - Each solution file follows this three-function structure:
   - `parse(data: str) -> <T>` — converts raw input string into a structured data type
   - `solve(parsed: <T>) -> <answer>` — pure logic, no IO; takes parsed data and returns the answer
