@@ -73,5 +73,6 @@ input/day_NN.txt      # personal puzzle input (gitignored)
 
 ## Conventions & Patterns
 
-- Tests live in the same file as the solution — write `test_*` functions directly in `part_NN_P.py`. No separate `test_` file needed. pytest discovers tests in all `*.py` files via `python_files = ["*.py"]` in `pyproject.toml`.
+- Tests live in the same file as the solution — write `test_*` functions directly in `day_NN_P.py`. No separate test file needed. pytest discovers tests in all `*.py` files via `python_files = ["*.py"]` in `pyproject.toml`.
 - Never read the full contents of `input/day_NN.txt` — these files can be large. Read only the first few lines to understand the format.
+- Each solution file has a `main()` function that reads `input/day_NN.txt` and prints the answer. Run it with `python src/day_NN_P.py`.
