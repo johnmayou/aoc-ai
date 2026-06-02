@@ -113,6 +113,12 @@ Never close a puzzle-solving issue or claim the work is done without explicit us
 
 For other tasks (refactoring, docstrings, tooling, etc.), steps 1 and 2 are sufficient.
 
+## Python Execution
+
+**Never use `python -c "..."` to run arbitrary Python.** Use only:
+- `python src/day_NN_P.py` — to run the solution against real input
+- `pytest` / `make test` — to run tests
+
 ## Conventions & Patterns
 
 - Tests live in the same file as the solution — write `test_*` functions directly in `day_NN_P.py`. No separate test file needed. pytest discovers tests in all `*.py` files via `python_files = ["*.py"]` in `pyproject.toml`.
