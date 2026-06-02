@@ -31,8 +31,6 @@ Every puzzle day follows the same loop:
 5. I submit on the AoC site and confirm; only then does the agent close the bd issue
 6. The agent commits the solution and pushes to remote
 
-The key constraint: the agent cannot close an issue until I confirm the answer was accepted. This keeps the AI honest, it can't declare victory based on passing its own tests.
-
 ## Progress
 
 | Day | Part 1 | Part 2 |
