@@ -2,7 +2,10 @@
 
 My solutions to [Advent of Code 2025](https://adventofcode.com/2025), used as a live experiment in AI-assisted development.
 
-[Advent of Code](https://adventofcode.com/2025) is an annual series of small programming puzzles released daily through December. Each day unlocks two parts; Part 2 is hidden until you solve Part 1. The puzzles are self-contained and well-specified, which makes them a good testbed for an AI-driven workflow: clear inputs, known sample answers, and a single correct output to verify against.
+<details>
+    <summary>What is Advent of Code?</summary>
+    [Advent of Code](https://adventofcode.com/2025) is an annual series of small programming puzzles released daily through December. Each day unlocks two parts; Part 2 is hidden until you solve Part 1. The puzzles are self-contained and well-specified, which makes them a good testbed for an AI-driven workflow: clear inputs, known sample answers, and a single correct output to verify against.
+</details>
 
 ## Why this repo exists
 
