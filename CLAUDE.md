@@ -54,6 +54,8 @@ bd close <id>         # Complete work
 
 ## Git Commits
 
+**Always commit `.beads/interactions.jsonl` and `.beads/issues.jsonl` if modified.** After `bd close` or any beads operation, run `git status` before pushing — beads files are often modified and must be staged and committed in a separate commit before `git pull --rebase`.
+
 **`cat` is aliased to `kat` (a `bat` wrapper) in this environment.** `bat` does not accept heredoc stdin, so the system default of `$(cat <<'EOF'...EOF)` for commit messages silently returns an empty string and aborts the commit.
 
 **Always use `\cat` to bypass the alias:**
